@@ -53,6 +53,19 @@ async function loadTemplate(path) {
   return template;
 }
 
+// // update total items bubble
+// export async function updateBubble() {
+//   const headerTemplate = await loadTemplate("../partials/header.html");
+//   const parser = new DOMParser();
+//   const doc = parser.parseFromString(headerTemplate, 'text/html');
+//   const cartItems = getLocalStorage("so-cart");
+//   let cartTotal = cartItems.length
+//   let bubble = doc.getElementById("cart-total-items");
+//   bubble.insertAdjacentText("beforeend", cartTotal);
+//   console.log(bubble)
+
+// }
+
 // function to dynamically load the header and footer into a page
 export async function loadHeaderFooter() {
   const headerTemplate = await loadTemplate("../partials/header.html");

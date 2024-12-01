@@ -3,8 +3,11 @@ import { loadHeaderFooter } from "./utils.mjs";
 
 loadHeaderFooter()
 
+const cartItems = getLocalStorage("so-cart");
+let cartTotal = document.querySelector(".cart-total");
+
 function renderCartContents() {
-  const cartItems = getLocalStorage("so-cart");
+  
   const htmlItems = cartItems.map((item) => cartItemTemplate(item));
   document.querySelector(".product-list").innerHTML = htmlItems.join("");
 
@@ -15,7 +18,7 @@ function renderCartContents() {
   console.log("current");
   console.log(currentTotal);
   if (currentTotal > 0) {
-    let cartTotal = document.querySelector(".cart-total");
+    
     cartTotal.innerHTML = `Total: ${currentTotal}`;
     console.log("rendered cart contents");
     console.log(cartItems);
@@ -40,5 +43,13 @@ function cartItemTemplate(item) {
 
   return newItem;
 }
+if (cartItems) {
+  renderCartContents();
+}
+else {
+  document.querySelector(".product-list").innerHTML = "Cart is empty"
+  cartTotal.innerHTML = `Total: $0`;
+}
 
-renderCartContents();
+
+

@@ -202,6 +202,23 @@ button {
   grid-column: 3;
 }
 
+/* Number of items in cart bubble */
+#cart-total-items {
+  width: 20px;
+  height: 20px;
+  background-color: #d07322;
+  font-size: 12px;
+  color: white;
+  position: absolute;
+  top: 5px;
+  right: -5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 100%;
+
+}
+
 @media screen and (min-width: 500px) {
   body {
     max-width: 1080px;
@@ -220,3 +237,5 @@ footer {
   font-size: var(--small-font);
   padding: 1em;
 }
+
+
