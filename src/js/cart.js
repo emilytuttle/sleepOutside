@@ -13,7 +13,7 @@ function renderCartContents() {
 
   let currentTotal = 0;
   for (let i = 0; i < cartItems.length; i++) {
-    currentTotal += cartItems[i].ListPrice;
+    currentTotal += cartItems[i].FinalPrice;
   }
   console.log("current");
   console.log(currentTotal);

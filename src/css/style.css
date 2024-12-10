@@ -219,6 +219,10 @@ button {
 
 }
 
+.product-card__Listprice {
+  text-decoration: line-through;
+}
+
 @media screen and (min-width: 500px) {
   body {
     max-width: 1080px;
